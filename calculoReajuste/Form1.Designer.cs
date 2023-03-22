@@ -40,8 +40,10 @@ namespace calculoReajuste
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ofdListaFuncionarios = new System.Windows.Forms.OpenFileDialog();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtFilePath
@@ -60,6 +62,7 @@ namespace calculoReajuste
             this.btnBrowseFiles.TabIndex = 1;
             this.btnBrowseFiles.Text = "...";
             this.btnBrowseFiles.UseVisualStyleBackColor = true;
+            this.btnBrowseFiles.Click += new System.EventHandler(this.btnBrowseFiles_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -176,11 +179,20 @@ namespace calculoReajuste
             this.ofdListaFuncionarios.Filter = "Arquivos de texto|*.txt";
             this.ofdListaFuncionarios.Title = "Seleção do arquivo com dados de funcionários";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 87);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(539, 238);
+            this.dataGridView1.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 186);
+            this.ClientSize = new System.Drawing.Size(590, 384);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBrowseFiles);
             this.Controls.Add(this.txtFilePath);
@@ -189,6 +201,7 @@ namespace calculoReajuste
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,6 +220,7 @@ namespace calculoReajuste
         private System.Windows.Forms.Label lblTotalComReaj;
         private System.Windows.Forms.Label lblTotalSemReaj;
         private System.Windows.Forms.OpenFileDialog ofdListaFuncionarios;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 
